@@ -7,3 +7,8 @@ test('renders expense title', ()=> {
     expect(title).toBeInTheDocument();
 })
 
+test('renders expense date', ()=> {
+    render(<ExpenseItem/>);
+    const date = screen.getByText('06 Oct, 2022');
+    expect(date).toBeInTheDocument()
+})
