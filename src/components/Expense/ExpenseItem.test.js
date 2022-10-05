@@ -12,3 +12,9 @@ test('renders expense date', ()=> {
     const date = screen.getByText('06 Oct, 2022');
     expect(date).toBeInTheDocument()
 })
+
+test('renders expense amount', ()=> {
+    render(<ExpenseItem/>);
+    const date = screen.getByText('$ 1099');
+    expect(date).toBeInTheDocument()
+})
